@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar/Navbar";
 import Home from "../Pages/Home";
 import Logout from "../Pages/Users/logout";
+import Footer from "../Components/Footer/Footer";
 import Login from "../Pages/Users/login";
 import "./App.css";
 import {
@@ -37,6 +38,7 @@ const Root = () => {
       <div>
         <Outlet />
       </div>
+      <Footer/>
     </>
   );
 };
