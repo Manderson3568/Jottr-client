@@ -1,4 +1,7 @@
 import Navbar from "../Components/Navbar/Navbar";
+import Home from "../Pages/Home";
+import Logout from "../Pages/Users/logout";
+import Login from "../Pages/Users/login";
 import "./App.css";
 import {
   createBrowserRouter,
@@ -12,16 +15,9 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        {/* <Route index element={<Home />} /> */}
-        {/* <Route path="/youtube" element={<Youtube />} />
-        <Route path="/pokemon" element={<Pokemon />} />
-        <Route path="/timer" element={<TimerExample />} />
-        <Route path="/youtube-timer" element={<YoutubeTimer />} />
-        <Route path="/stopwatch" element={<Stopwatch />} />
-        <Route
-          path="/youtube-typing-controls"
-          element={<YoutubeTypingControls />}
-        /> */}
+        <Route index element={<Home />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/login" element={<Login />} />
       </Route>
     )
   );
