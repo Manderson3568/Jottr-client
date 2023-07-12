@@ -35,6 +35,20 @@ export const loginUser = createAsyncThunk('user/loginUser', async ({ email, pass
   }
 });
 
+export const signupUser = createAsyncThunk('user/signupUser', async ({ name, email, password }) => {
+    try {
+      const response = await axios.post("http://localhost:8000/api/users/signup", {
+        name: name,
+        email: email,
+        password: password
+      });
+      console.log(response.data)
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  });
+
 const userSlice = createSlice({
   name: 'user',
   initialState: getUser(),

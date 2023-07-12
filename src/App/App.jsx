@@ -11,6 +11,7 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+import Signup from "../Pages/Users/signup";
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +20,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Route>
     )
   );
